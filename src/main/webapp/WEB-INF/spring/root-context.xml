@@ -11,13 +11,15 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 	
-	<!-- Root Context: defines shared resources visible to all other web components -->
+		<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		<context:property-placeholder location="file:C://config/cinema.properties"/>
 		
 		<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-			<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-			<property name="url" value="jdbc:oracle:thin:@192.168.0.14:1521:xe"/>
-			<property name="username" value="cinema"/>
-			<property name="password" value="1234"/>
+			<property name="driverClassName" value="${db.driver}"/>
+			<property name="url" value="${db.url}"/>
+			<property name="username" value="${db.username}"/>
+			<property name="password" value="${db.password}"/>
 		</bean>
 		
 		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
