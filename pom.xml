@@ -150,14 +150,14 @@
 		   <version>${org.springframework-version}</version>
 		</dependency>
 				
-		<!-- 컨넥션 풀 라이브러리 -->
+		<!-- 컨넥션 풀 -->
 		<dependency>
 		    <groupId>commons-dbcp</groupId>
 		    <artifactId>commons-dbcp</artifactId>
 		    <version>1.4</version>
 		</dependency>	
 		
-		<!-- MyBatis 라이브러리 -->
+		<!-- MyBatis -->
 		<dependency>
 		    <groupId>org.mybatis</groupId>
 		    <artifactId>mybatis</artifactId>
